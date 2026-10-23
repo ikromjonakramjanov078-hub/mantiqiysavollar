@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070707">
+  <meta name="description" content="Mantiqiy savollar va boshqotirmalar orqali fikrlash qobiliyatingizni sinab ko‘ring.">
+  <title>MANTIQIY SAVOLLAR | Jadra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <header class="topbar">
+    <a href="#" class="brand">
+      <span class="brand-icon">◈</span>
+      <span>MANTIQIY <b>SAVOLLAR</b></span>
+    </a>
+    <div class="status"><i></i> TIZIM FAOL</div>
+  </header>
+
+  <main>
+    <!-- BOSH SAHIFA -->
+    <section id="intro" class="screen intro active">
+      <div class="intro-symbol">◈</div>
+      <div class="eyebrow">FIKRLASH QOBILIYATINGNI SINOVDAN O‘TKAZ</div>
+
+      <h1>MANTIQ<br><span>CHEGARASIZ.</span></h1>
+
+      <p class="intro-text">
+        30 ta savol. Turli jumboqlar. Har bir javob yangi imkoniyat.
+        Aqlingni charxla va o‘z darajangni aniqlagin!
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>30</strong>
+          <span>SAVOL</span>
+        </div>
+        <div class="stat">
+          <strong>3000</strong>
+          <span>MAKSIMAL BALL</span>
+        </div>
+        <div class="stat">
+          <strong>∞</strong>
+          <span>IMKONIYAT</span>
+        </div>
+      </div>
+
+      <div class="warning">
+        <span class="warning-icon">!</span>
+        <div>
+          <strong>ESLATMA</strong>
+          <p>Shoshilma. Savolni oxirigacha o‘qi va javobni mantiq bilan tanla.</p>
+        </div>
+      </div>
+
+      <button class="primary-btn" id="startBtn">
+        SINOVNI BOSHLASH <span>↗</span>
+      </button>
+
+      <div class="small-note">DIQQAT · MANTIQ · TAFAKKUR</div>
+    </section>
+
+    <!-- SAVOLLAR -->
+    <section id="game" class="screen">
+      <div class="game-heading">
+        <div>
+          <div class="eyebrow">MANTIQIY SINOV</div>
+          <h2 id="roomTitle">Birinchi savol</h2>
+        </div>
+        <div class="score-box">
+          <span>TO‘PLANGAN BALL</span>
+          <strong id="score">0000</strong>
+        </div>
+      </div>
+
+      <div class="progress-info">
+        <span id="levelLabel">SAVOL 01 / 30</span>
+        <span id="progressPercent">3%</span>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+
+      <div class="room">
+        <div class="room-top">
+          <span class="room-code" id="roomCode">MANTIQ_001</span>
+          <span class="room-status"><i></i> SINOV DAVOM ETMOQDA</span>
+        </div>
+
+        <div class="door-scene">
+          <div class="door-light"></div>
+          <div class="door">
+            <div class="door-frame"></div>
+            <div class="door-inner">
+              <div class="door-symbol" id="doorSymbol">01</div>
+              <div class="door-lines"></div>
+              <div class="door-handle"></div>
+            </div>
+          </div>
+          <div class="floor-line"></div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-icon">◈</div>
+          <p id="storyText">Sinovga xush kelibsiz!</p>
+        </div>
+
+        <div class="challenge">
+          <div class="challenge-label"><span>◈</span> SAVOL</div>
+          <h3 id="question">Savol yuklanmoqda...</h3>
+
+          <div id="options" class="options"></div>
+
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+
+          <button class="primary-btn" id="nextBtn" disabled>
+            KEYINGI SAVOL <span>→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="bottom-info">
+        <span>◈ Har bir to‘g‘ri javob: +100 ball</span>
+        <span id="remaining">29 ta savol qoldi</span>
+      </div>
+    </section>
+
+    <!-- YAKUNIY NATIJA -->
+    <section id="ending" class="screen ending">
+      <div class="ending-symbol" id="endingSymbol">♛</div>
+      <div class="eyebrow">SINOV YAKUNLANDI</div>
+      <h2 id="endingTitle">Natijang tayyor!</h2>
+      <p id="endingText"></p>
+
+      <div class="result-card">
+        <div>
+          <span>TO‘PLANGAN BALL</span>
+          <strong id="finalScore">0</strong>
+        </div>
+        <div>
+          <span>TO‘G‘RI JAVOB</span>
+          <strong id="correctCount">0/30</strong>
+        </div>
+        <div>
+          <span>DARAJANG</span>
+          <strong id="endingRank">BOSHLovCHI</strong>
+        </div>
+      </div>
+
+      <div class="result-track">
+        <div class="result-track-top">
+          <span>NATIJA KO‘RSATKICHI</span>
+          <strong id="resultPercent">0%</strong>
+        </div>
+        <div class="progress-track">
+          <div id="resultBar"></div>
+        </div>
+      </div>
+
+      <div class="secret-message">
+        <span>SEN UCHUN XABAR</span>
+        <p id="secretText"></p>
+      </div>
+
+      <button id="restartBtn" class="primary-btn">
+        QAYTA SINAB KO‘RISH <span>↻</span>
+      </button>
+      <button id="homeBtn" class="secondary-btn">
+        BOSH SAHIFAGA QAYTISH
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">MANTIQIY <span>SAVOLLAR</span></div>
+    <div class="author-label">LOYIHA MUALLIFI</div>
+    <div class="author-name">AKRAMJONOVA JADRA MARATOVNA</div>
+    <div class="footer-bottom">MANTIQ BILAN FIKRLA. IMKONIYATLARNI OCH.</div>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
